@@ -1,52 +1,63 @@
 @import url(http://fonts.googleapis.com/css?family=Sacramento);
 @import url(http://fonts.googleapis.com/css?family=Sail);
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
 body, html {
-background-color: rgb(255,255,243); 
-height: 100%;
-min-height: 100%;
-font-family: 'Sail', cursive;
-font-size: 20px;
-width: 960px;
-margin: 20px auto 20px;
+/*background-color: rgb(255,255,243); */
+background: url("../images/hoa-bg.jpg");
+background-repeat:no-repeat;
+background-size:100% 100%;
+background-origin: border-box;
+font: 18px;
+color: black;
+font-family: "New Times Roman", serif;
 }
 
 figcaption {
-	font-size: 25px;
+	font-size: 13px;
 	color: black;
 	text-align: center;
-	font-family: 'Sacramento', cursive, Georgia, "New Times Roman", serif;
+	font-family: Georgia, "New Times Roman", serif;
+	font-style: italic;
 }
 #header {
-	color: black;
+	/*background-color: #FFCBE8;*/
+	background-color: rgba(25, 45, 137, 0.73);
+	color: rgba(40, 244, 8, 0.7);
 	font-family: 'Sail', cursive;
-	font-weight: bolder;
 	text-align: left;
-	font-size: 50px;
+	font-size: 150%;
 	line-height: 0%;
-	padding: 1%;
-}
-.fixed {
+	border-bottom: 5px outset #A40A60;
+	width: 100%;
 	position: fixed;
-	top: 10px;
-	right: 30px;
-	float: right;
-	color: #FFCBE8;
-	font-size: 50px;
+	top: 0%;
+	left: 0%;
+	padding: 2% 0 0 5%;
+	z-index: 1;
 }
-/** {
-	box-sizing: border-box;		
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-}*/
+
+#main-content {
+	margin-top: 10%;
+	background-color: white;
+	padding: 30px;
+}
 .self {
 	text-align: justify;
-	line-height: 200%;
+	line-height: 150%;
 }
 #footer {
-	/*background-color: #FFCBE8;*/
-	font-family: 'Sacramento', cursive, Georgia, "New Times Roman", serif;
+	background-color: #FFCBE8;
+	font-family: Georgia, "New Times Roman", serif;
 	text-align: center;
-	font-size: 25px;
+	font-size: 15px;
+	font-style: italic;
 	padding: 5px;
 	margin-top: 30px;
 	display: block;
@@ -58,11 +69,7 @@ figure {
 	display: block;
 	margin: 10px 10px 10px 0;
 	text-align: center;
-	font-size: 20px
-	
-	/*top: 44px;
-	margin: 42px 0px 20px 30px;
-	*/
+	font-size: 20px;
 }
 .details {
 	line-height: 200%;
@@ -78,7 +85,7 @@ figure {
 	float: left;
 }
 .col-3-2 {
-	width: 38%;
+	width: 40%;
 	float: left;
 }
 .col-3-3 {
@@ -87,20 +94,107 @@ figure {
 }
 [Class*="col-"] {
 	margin-left: 2%;
+	margin-top: 2%;
+	margin-bottom: 3%;
+	padding-left: 15px;
+	padding-bottom: 15px;
+	background-color: white;
 }/*selects any element with class="col-"*/
 
 .first {
 	margin-left: 0%;
+	clear: both;
 }/*the first column will not have margin*/
+a:link {
+	color: #1D2561;
+	text-decoration: none;
+}
+a:hover {
+	color: #EA283E;
+	text-decoration: none;
+}
+h3 {
+	color: #3B8E15;
+}
+
+#social {
+  position: fixed;
+  top: 163px;
+  right: 20px;
+  width: 40px;
+  z-index: 2;
+}
+
+#social a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+a.fbook, a.utube, a.gplus {
+  background: url(../images/hoa-social.png) no-repeat;
+}
+
+a.fbook { background-position: 0 0; }
+a.fbook:hover { background-position: -40px 0; }
+a.fbook:active { background-position: -80px 0; }
+
+a.utube { background-position: 0 -280px; }
+a.utube:hover { background-position: -40px -280px; }
+a.utube:active { background-position: -80px -280px; }
+
+a.gplus { background-position: 0 -80px; }
+a.gplus:hover { background-position: -40px -80px; }
+a.gplus:active { background-position: -80px -80px; }
 
 
+/*//////////////RESPONSIVE//////////////*/
 
+@media only screen and (max-width: 1136px) {
+	#social {
+		position: absolute;
+		top: 20px;
+		right: 4px;
+		width: auto;
+	}
+	#social a {
+		display: inline-block;
+	}
+}
 
+@media only screen and (max-width: 980px) {
+	#social {
+		position: absolute;
+		top: 5px;
+		right: 4px;
+		width: auto;
+	}
+	#social a {
+		display: inline-block;
+	}
+}
+@media only screen and (max-width: 1035px) {
+	body {
+		font-size: 90%;
+	}
+	.wrapper {
+		width: 90%;
+	}
+	#header {
+		font-size: 85%;
+	}
+}
 
-
-
-
-
+@media only screen and (max-width: 888px) {
+	[Class*="col-"] {
+		width: 100%;
+		margin-left: 0;
+		float: none;
+	}
+}
 
 
 
