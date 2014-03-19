@@ -10,9 +10,9 @@
 
 body, html {
 /*background-color: rgb(255,255,243); */
-background: url("../images/hoa-bg.jpg");
+background: url("../images/hoa-bg1.jpg");
 background-repeat:no-repeat;
-background-size:100% 100%;
+background-size: cover;
 background-origin: border-box;
 font: 18px;
 color: black;
@@ -78,7 +78,9 @@ figure {
 	width: 960px;
 	margin: 0 auto;
 }
-
+.shadow {
+  box-shadow: 0 3px 10px #333;
+}
 
 .col-3-1 {
 	width: 32%;
