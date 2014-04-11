@@ -8,12 +8,11 @@
 }
 
 
-body, html {
+body {
 /*background-color: rgb(255,255,243); */
 background: url("../images/hoa-bg1.jpg");
 background-repeat:no-repeat;
 background-size: cover;
-background-origin: border-box;
 font: 18px;
 color: black;
 font-family: "New Times Roman", serif;
