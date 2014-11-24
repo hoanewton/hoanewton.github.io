@@ -1,1 +1,63 @@
-Hello World
+<html>
+<head>
+	<title>thinkful lesson 1</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+</head>
+<body>
+<style type="text/css">
+	* {
+		margin: 0 auto;
+		text-align: center;
+	}
+	body {
+		background-color: #FFFFCC;
+	}
+	div	{
+		margin-top: 10%;
+		padding: 20px;
+		margin: 10%;
+		background-color: #FFFFFF;
+	}
+	button {
+		margin-left: 10px;
+	}
+</style>
+
+	<div>
+		<h1>Adder / Subtractor</h1><br>
+		<span>X = </span> <input placeholder="put a number" class="x"><br><br>
+		<span>Y = </span> <input placeholder="put a number" class="y"><br><br>
+		<button class="plus">+</button><button class="minus">-</button> <br><br>
+		<h3 class="result"></h3>
+	</div>
+
+<script>
+$( document ).ready(function() {
+	console.log("Loaded Bro.");
+	$("div").on("click", ".plus", function(){
+		var x = parseInt($(".x").val());
+		var y = parseInt($(".y").val());
+		var z = $(".result");
+		if (isNaN(x) || isNaN(y)){
+			alert("You didn't put in a number. Try again");
+		} else {
+			z.text( x + " plus " + y + " is " + (x+y) );
+		};
+	});
+	$("div").on("click", ".minus", function(){
+		var x = parseInt($(".x").val());
+		var y = parseInt($(".y").val());
+		var z = $(".result");
+		if (isNaN(x) || isNaN(y)){
+			alert("You didn't put in a number. Try again");
+		} else {
+			z.text( x + " plus " + y + " is " + (x-y));
+		};
+	});
+});
+</script>
+
+</body>
+</html>
+
